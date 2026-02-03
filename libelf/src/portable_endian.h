@@ -49,14 +49,38 @@
 
 #	include <sys/endian.h>
 
+#ifndef be16toh
 #	define be16toh(x) betoh16(x)
+#endif
+#ifndef le16toh
 #	define le16toh(x) letoh16(x)
+#endif
 
+#ifndef be32toh
 #	define be32toh(x) betoh32(x)
+#endif
+#ifndef le32toh
 #	define le32toh(x) letoh32(x)
+#endif
 
+#ifndef be64toh
 #	define be64toh(x) betoh64(x)
+#endif
+#ifndef le64toh
 #	define le64toh(x) letoh64(x)
+#endif
+
+#ifndef __BYTE_ORDER
+#define __BYTE_ORDER _BYTE_ORDER
+#endif
+
+#ifndef __LITTLE_ENDIAN
+#define __LITTLE_ENDIAN _LITTLE_ENDIAN
+#endif
+
+#ifndef __BIG_ENDIAN
+#define __BIG_ENDIAN _BIG_ENDIAN
+#endif
 
 #elif defined(__WINDOWS__)
 

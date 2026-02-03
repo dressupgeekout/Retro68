@@ -24,7 +24,7 @@ add_library(ResourceFiles
     ResourceFile.h ResourceFile.cc
     )
 
-find_path(HFS_INCLUDE_DIR NAMES hfs.h)
+find_path(HFS_INCLUDE_DIR NAMES hfs.h PATHS ${CMAKE_CURRENT_LIST_DIR}/../hfsutils/libhfs)
 find_library(HFS_LIBRARY NAMES hfs)
 
 target_link_libraries(ResourceFiles ${Boost_LIBRARIES} ${HFS_LIBRARY})

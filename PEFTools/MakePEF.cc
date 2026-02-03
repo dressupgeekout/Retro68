@@ -6,7 +6,9 @@
 #include <set>
 #include <algorithm>
 #include <string.h>
+#ifndef __NetBSD__
 #include <alloca.h>
+#endif
 
 #include <assert.h>
 #include <stdint.h>
